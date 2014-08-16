@@ -68,6 +68,8 @@ class Hhvm < Formula
   def install
     args = [
       ".",
+      "-DCMAKE_AR=#{Formula['gcc48'].opt_prefix}/bin/gcc-ar-4.8",
+      "-DCMAKE_RANLIB=#{Formula['gcc48'].opt_prefix}/bin/gcc-ranlib-4.8",
       "-DCMAKE_CXX_COMPILER=#{Formula['gcc48'].opt_prefix}/bin/g++-4.8",
       "-DCMAKE_C_COMPILER=#{Formula['gcc48'].opt_prefix}/bin/gcc-4.8",
       "-DCMAKE_ASM_COMPILER=#{Formula['gcc48'].opt_prefix}/bin/gcc-4.8",
